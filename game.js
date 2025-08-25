@@ -180,7 +180,7 @@ function updateProjectiles() {
 }
 
 function drawProjectiles() {
-  ctx.fillStyle = "white";
+  ctx.fillStyle = "green";
   [...player.projectiles, ...enemy.projectiles].forEach((proj) => {
     ctx.beginPath();
     ctx.arc(proj.x, proj.y, proj.radius, 0, Math.PI * 2);
@@ -190,16 +190,15 @@ function drawProjectiles() {
 
 function drawTitle() {
   ctx.save();
-  ctx.fillStyle = "rgba(155, 247, 247, 0.95)";
+  ctx.fillStyle = "rgba(218, 236, 236, 0.95)";
   ctx.font = "bold 48px Arial";
   ctx.textAlign = "center";
-  ctx.filter =
-    "brightness(1.4) drop-shadow(0 0 10px rgba(215, 255, 255, 0.96))";
+  ctx.filter = "brightness(1.4) drop-shadow(0 0 10px rgba(42, 44, 44, 0.96))";
   ctx.shadowColor = "rgba(0, 0, 0, 0.4)";
   ctx.shadowOffsetX = 0;
   ctx.shadowOffsetY = 0;
   ctx.shadowBlur = 10;
-  ctx.fillText("Catcabal Sacred Arena", canvas.width / 2, 60);
+  ctx.fillText("Lamumu fight club!", canvas.width / 2, 60);
   ctx.restore();
 }
 
@@ -234,7 +233,7 @@ function draw() {
   drawTitle();
 
   if (showEndMessage) {
-    ctx.fillStyle = endMessage.includes("won") ? "teal" : "black";
+    ctx.fillStyle = endMessage.includes("won") ? "grey" : "black";
     ctx.font = "bold 30px Arial";
     ctx.textAlign = "center";
     ctx.shadowColor = "rgba(0, 0, 0, 0.4)";
@@ -280,9 +279,7 @@ function gameLoop() {
   } else {
     showEndMessage = true;
     endMessage =
-      player.health <= 0
-        ? "Game over, you are unworthy!"
-        : "You won? fine, you may enter the cabal.";
+      player.health <= 0 ? "Game over, you lost!" : "You won? mooo-some friend";
 
     typedEndMessage = "";
     typingIndex = 0;

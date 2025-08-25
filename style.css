@@ -14,7 +14,7 @@ body {
 }
 
 #gameCanvas {
-  background: rgb(163, 211, 208);
+  background: rgb(255, 255, 255);
   display: block;
   width: 100vw;
   height: 100vh;
@@ -38,11 +38,11 @@ button {
 }
 
 button:hover {
-  background-color: rgb(28, 224, 224);
+  background-color: rgb(172, 182, 181);
 }
 
 button:active {
-  background-color: rgb(35, 238, 238);
+  background-color: rgb(172, 182, 181);
 }
 
 .top-right {
@@ -73,7 +73,7 @@ button:active {
 }
 #respawnBtn:hover {
   background-color: #555; /* Brighter or different shade */
-  color: rgb(28, 224, 224); /* Optional: Change text color on hover */
+  color: rgb(172, 182, 181); /* Optional: Change text color on hover */
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4); /* Optional: deeper shadow */
 }
 #watermark {
